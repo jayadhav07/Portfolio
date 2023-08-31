@@ -1,0 +1,111 @@
+[debug] [2023-08-17T10:40:56.614Z] ----------------------------------------------------------------------
+[debug] [2023-08-17T10:40:56.616Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-08-17T10:40:56.616Z] CLI Version:   12.4.8
+[debug] [2023-08-17T10:40:56.617Z] Platform:      win32
+[debug] [2023-08-17T10:40:56.617Z] Node Version:  v18.7.0
+[debug] [2023-08-17T10:40:56.618Z] Time:          Thu Aug 17 2023 16:10:56 GMT+0530 (India Standard Time)
+[debug] [2023-08-17T10:40:56.618Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-17T10:40:56.709Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-17T10:40:56.709Z] > authorizing via signed-in user (jayadhav2000@gmail.com)
+[debug] [2023-08-17T10:40:56.710Z] [iam] checking project jay-adhav for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-08-17T10:40:56.712Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/jay-adhav:testIamPermissions [none]
+[debug] [2023-08-17T10:40:56.712Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/jay-adhav:testIamPermissions x-goog-quota-user=projects/jay-adhav
+[debug] [2023-08-17T10:40:56.712Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/jay-adhav:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-08-17T10:40:58.680Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/jay-adhav:testIamPermissions 200
+[debug] [2023-08-17T10:40:58.680Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/jay-adhav:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-08-17T10:40:58.682Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/jay-adhav [none]
+[debug] [2023-08-17T10:40:59.715Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/jay-adhav 200
+[debug] [2023-08-17T10:40:59.715Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/jay-adhav {"projectId":"jay-adhav","projectNumber":"902585264628","displayName":"jay adhav","name":"projects/jay-adhav","resources":{"hostingSite":"jay-adhav"},"state":"ACTIVE","etag":"1_93a1306a-abb7-4333-a0ed-ac456923223d"}
+[info] 
+[info] === Deploying to 'jay-adhav'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-08-17T10:40:59.722Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/jay-adhav/versions [none]
+[debug] [2023-08-17T10:40:59.722Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/jay-adhav/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-08-17T10:41:01.651Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/jay-adhav/versions 200
+[debug] [2023-08-17T10:41:01.651Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/jay-adhav/versions {"name":"projects/902585264628/sites/jay-adhav/versions/bd207f80caf6e18f","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[jay-adhav]: beginning deploy... 
+[info] i  hosting[jay-adhav]: found 32 files in build 
+[debug] [2023-08-17T10:41:01.664Z] [hosting] uploading with 200 concurrency
+[debug] [2023-08-17T10:41:01.937Z] [hosting] hash cache [YnVpbGQ] stored for 32 files
+[debug] [2023-08-17T10:41:01.938Z] [hosting][hash queue][FINAL] {"max":263,"min":4,"avg":34.25,"active":0,"complete":32,"success":32,"errored":0,"retried":0,"total":32,"elapsed":271}
+[debug] [2023-08-17T10:41:01.938Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/902585264628/sites/jay-adhav/versions/bd207f80caf6e18f:populateFiles [none]
+[debug] [2023-08-17T10:41:01.938Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/902585264628/sites/jay-adhav/versions/bd207f80caf6e18f:populateFiles {"files":{"/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/Jay CV.pdf":"2085d81eefb24f9951d486de7776418d14c52d25ae5c94999414b23563cb2aff","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/asset-manifest.json":"70eb465847d4441459d4a5e7b59fea97b96d3d8223429f27320e7fbcf7bf4324","/index.html":"e75f581300d2f29d57b5989ea90585b81186fa6f5b5da3c6f3863599b46efb76","/static/js/787.1ed0c42c.chunk.js":"02025b96a2b26a33d8109ba47caa48b8f3c7d1ceccc995b7fc1434a65558fb0b","/static/css/main.bee1e7ab.css":"b291c9c908ff05c32b2d36e00c062dc866bab205b095a66428dac61b88a2ba6a","/static/js/787.1ed0c42c.chunk.js.map":"35dd119f1344b7e0cc00af4f20efa880f26aa93dbb5838b7c8287157b205a113","/static/css/main.bee1e7ab.css.map":"ad5e94d3a38e90d24bfc2b81c2cd0c3096ad633c55f118763e9ab96c96e50e1e","/static/js/main.134e4f73.js.LICENSE.txt":"976dbd7959365ef7e9cf4ca4d0a89827ca0f29314c7e306e33ccc3e7c14ba767","/static/media/education.10cfa28a40119ebd70cf.svg":"3bed06c43d3e14b8ee0bed8b6647b0828a01455323a23662d1b42a7a595b95b0","/static/media/interests.809890a3e4fb0938f61b.svg":"44f0fd2ecf8ae2a595cf4a3136fd07513126e799b2f33c7f76ad51f8a5fe8660","/static/media/bg.d580cd375921d13ae60d.jpg":"e95ade5d8ae1cbcc1c0bd82ccc38936b6dda9a42886bc4763c336192564a61b2","/static/media/programming-skills.d19983a9bee884277ffa.svg":"da3b6e81265ba8421670390d1b8b12d9ace2bfd9d7e69d3df277bfed559c634e","/static/media/projects.2b352a52b0588dab62f5.svg":"f3c69c0c1a890705d895eb3bb09dd82e50ae43d6dfa2f1ed4884ebff18925646","/static/media/work-history.a566475dedb99dea4bb8.svg":"a07b515899a7889b67555cc9fbe962bd0cb515580c4c23d3b79777e16a4b3dbb","/404.html":"daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa","/static/media/Poppins-ExtraBold.4ed78cd5d64af4efc3c7.ttf":"1303947dfd23eef2522278ebc85a6ddf56346bd59277f23d8483c97a129d5db3","/static/media/Poppins-Bold.404e299be26d78e66794.ttf":"cfb93b853c885cdae19a95b0e383a55a7cbce57628c65befea331c870529d49a","/static/media/Poppins-Light.f41b63c0bb0963ace821.ttf":"ee543514d7393df89d5687f209d2fdac57f05a6166f498374855a2e7c2e6be1b","/static/media/Poppins-Medium.9e1bb626874ed49aa343.ttf":"69e09e69fc289541a2acfc444a1c7e074d2846c16293b33aa2be8fcc3e15742d","/static/media/Poppins-Regular.8081832fc5cfbf634aa6.ttf":"7b4029b25091554f660ffde5f789f7d5045c61dd187700e28d01c18e3977ae39","/static/media/Poppins-SemiBold.cce5625b56ec678e4202.ttf":"42c96b69c4357ac1c9e162b71165565613698724284b53d22a7183fb5c821f3f","/static/media/Poppins-Thin.a61eaf4c2e4d44d6db6a.ttf":"7e038cc16e2926838eb71071243ebb755d7c2f9b23d22d39630593d219e9dd63","/static/media/mailz.d13d5e32cbc73884b526.jpeg":"3d02c43a10c36f5d8d4d145c36758f74db12b2be738ed2ec0d616d56a5562f31","/static/js/main.134e4f73.js":"668b63237b084582698abb648e003f0782bd099fbec6b363a9e7c379d12a960f","/static/media/jay5.0adacf6cd23faf3916e7.jpg":"28d89a4d8e86d07cf7403242357f2eba70b3f7d3b92ce40b332d8d61040cb05a","/static/media/about-me2.a30fba03182ba94b6cad.jpg":"f3d003ca5389b4e7049f82103eb71004c0c021db86c834625a5453f2b27ad2b9","/static/js/main.134e4f73.js.map":"cad92e81f7a3ba0062c5eebd4b7ab916a4519e5ffd8b3822748f3d309240c53e"}}
+[debug] [2023-08-17T10:41:03.886Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/902585264628/sites/jay-adhav/versions/bd207f80caf6e18f:populateFiles 200
+[debug] [2023-08-17T10:41:03.887Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/902585264628/sites/jay-adhav/versions/bd207f80caf6e18f:populateFiles {"uploadRequiredHashes":["cad92e81f7a3ba0062c5eebd4b7ab916a4519e5ffd8b3822748f3d309240c53e","e75f581300d2f29d57b5989ea90585b81186fa6f5b5da3c6f3863599b46efb76","668b63237b084582698abb648e003f0782bd099fbec6b363a9e7c379d12a960f","70eb465847d4441459d4a5e7b59fea97b96d3d8223429f27320e7fbcf7bf4324"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files"}
+[debug] [2023-08-17T10:41:03.888Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/cad92e81f7a3ba0062c5eebd4b7ab916a4519e5ffd8b3822748f3d309240c53e [none]
+[debug] [2023-08-17T10:41:03.888Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/cad92e81f7a3ba0062c5eebd4b7ab916a4519e5ffd8b3822748f3d309240c53e [stream]
+[debug] [2023-08-17T10:41:03.889Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/e75f581300d2f29d57b5989ea90585b81186fa6f5b5da3c6f3863599b46efb76 [none]
+[debug] [2023-08-17T10:41:03.889Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/e75f581300d2f29d57b5989ea90585b81186fa6f5b5da3c6f3863599b46efb76 [stream]
+[debug] [2023-08-17T10:41:03.890Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/668b63237b084582698abb648e003f0782bd099fbec6b363a9e7c379d12a960f [none]
+[debug] [2023-08-17T10:41:03.890Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/668b63237b084582698abb648e003f0782bd099fbec6b363a9e7c379d12a960f [stream]
+[debug] [2023-08-17T10:41:03.891Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/70eb465847d4441459d4a5e7b59fea97b96d3d8223429f27320e7fbcf7bf4324 [none]
+[debug] [2023-08-17T10:41:03.891Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/70eb465847d4441459d4a5e7b59fea97b96d3d8223429f27320e7fbcf7bf4324 [stream]
+[debug] [2023-08-17T10:41:03.892Z] [hosting][populate queue][FINAL] {"max":1951,"min":1951,"avg":1951,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1956}
+[debug] [2023-08-17T10:41:03.892Z] [hosting] uploads queued: 4
+[debug] [2023-08-17T10:41:06.222Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/70eb465847d4441459d4a5e7b59fea97b96d3d8223429f27320e7fbcf7bf4324 200
+[debug] [2023-08-17T10:41:06.222Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/70eb465847d4441459d4a5e7b59fea97b96d3d8223429f27320e7fbcf7bf4324 [stream]
+[debug] [2023-08-17T10:41:06.779Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/e75f581300d2f29d57b5989ea90585b81186fa6f5b5da3c6f3863599b46efb76 200
+[debug] [2023-08-17T10:41:06.780Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/e75f581300d2f29d57b5989ea90585b81186fa6f5b5da3c6f3863599b46efb76 [stream]
+[debug] [2023-08-17T10:41:27.819Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/668b63237b084582698abb648e003f0782bd099fbec6b363a9e7c379d12a960f 200
+[debug] [2023-08-17T10:41:27.819Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/668b63237b084582698abb648e003f0782bd099fbec6b363a9e7c379d12a960f [stream]
+[debug] [2023-08-17T10:41:43.130Z] [uploadQueue] Retrying task cad92e81f7a3ba0062c5eebd4b7ab916a4519e5ffd8b3822748f3d309240c53e
+[debug] [2023-08-17T10:41:43.131Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/cad92e81f7a3ba0062c5eebd4b7ab916a4519e5ffd8b3822748f3d309240c53e [none]
+[debug] [2023-08-17T10:41:43.131Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/cad92e81f7a3ba0062c5eebd4b7ab916a4519e5ffd8b3822748f3d309240c53e [stream]
+[debug] [2023-08-17T10:42:22.778Z] [uploadQueue] Retrying task cad92e81f7a3ba0062c5eebd4b7ab916a4519e5ffd8b3822748f3d309240c53e
+[debug] [2023-08-17T10:42:22.779Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/cad92e81f7a3ba0062c5eebd4b7ab916a4519e5ffd8b3822748f3d309240c53e [none]
+[debug] [2023-08-17T10:42:22.779Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/cad92e81f7a3ba0062c5eebd4b7ab916a4519e5ffd8b3822748f3d309240c53e [stream]
+[debug] [2023-08-17T10:43:03.223Z] [uploadQueue] Retrying task cad92e81f7a3ba0062c5eebd4b7ab916a4519e5ffd8b3822748f3d309240c53e
+[debug] [2023-08-17T10:43:03.224Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/cad92e81f7a3ba0062c5eebd4b7ab916a4519e5ffd8b3822748f3d309240c53e [none]
+[debug] [2023-08-17T10:43:03.224Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/cad92e81f7a3ba0062c5eebd4b7ab916a4519e5ffd8b3822748f3d309240c53e [stream]
+[debug] [2023-08-17T10:43:34.189Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/cad92e81f7a3ba0062c5eebd4b7ab916a4519e5ffd8b3822748f3d309240c53e 200
+[debug] [2023-08-17T10:43:34.189Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/jay-adhav/versions/bd207f80caf6e18f/files/cad92e81f7a3ba0062c5eebd4b7ab916a4519e5ffd8b3822748f3d309240c53e [stream]
+[debug] [2023-08-17T10:43:34.189Z] [hosting][upload queue][FINAL] {"max":30966,"min":2335,"avg":15031.5,"active":0,"complete":4,"success":4,"errored":0,"retried":3,"total":4,"elapsed":150302}
+[info] +  hosting[jay-adhav]: file upload complete 
+[debug] [2023-08-17T10:43:34.190Z] [hosting] deploy completed after 152537ms
+[debug] [2023-08-17T10:43:34.190Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "jay-adhav"
+    },
+    "version": "projects/902585264628/sites/jay-adhav/versions/bd207f80caf6e18f"
+  }
+]
+[info] i  hosting[jay-adhav]: finalizing version... 
+[debug] [2023-08-17T10:43:34.193Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/jay-adhav/versions/bd207f80caf6e18f updateMask=status%2Cconfig
+[debug] [2023-08-17T10:43:34.194Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/jay-adhav/versions/bd207f80caf6e18f {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2023-08-17T10:43:35.454Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/jay-adhav/versions/bd207f80caf6e18f 200
+[debug] [2023-08-17T10:43:35.454Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/jay-adhav/versions/bd207f80caf6e18f {"name":"projects/902585264628/sites/jay-adhav/versions/bd207f80caf6e18f","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-08-17T10:41:01.080842Z","createUser":{"email":"jayadhav2000@gmail.com"},"finalizeTime":"2023-08-17T10:43:35.518908Z","finalizeUser":{"email":"jayadhav2000@gmail.com"}}
+[debug] [2023-08-17T10:43:35.454Z] [hosting] finalized version for jay-adhav:[object Object]
+[info] +  hosting[jay-adhav]: version finalized 
+[info] i  hosting[jay-adhav]: releasing new version... 
+[debug] [2023-08-17T10:43:35.455Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/jay-adhav/channels/live/releases versionName=projects%2F902585264628%2Fsites%2Fjay-adhav%2Fversions%2Fbd207f80caf6e18f
+[debug] [2023-08-17T10:43:35.455Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/jay-adhav/channels/live/releases {}
+[debug] [2023-08-17T10:43:36.964Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/jay-adhav/channels/live/releases 200
+[debug] [2023-08-17T10:43:36.964Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/jay-adhav/channels/live/releases {"name":"projects/902585264628/sites/jay-adhav/channels/live/releases/1692269016235000","version":{"name":"projects/902585264628/sites/jay-adhav/versions/bd207f80caf6e18f","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-08-17T10:41:01.080842Z","createUser":{"email":"jayadhav2000@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTteESrwsQuK7rB7lvMyvZbA1U_txO3QWunR5Od5Vue1u-BQ"},"finalizeTime":"2023-08-17T10:43:35.518908Z","finalizeUser":{"email":"jayadhav2000@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTteESrwsQuK7rB7lvMyvZbA1U_txO3QWunR5Od5Vue1u-BQ"}},"type":"DEPLOY","releaseTime":"2023-08-17T10:43:36.235Z","releaseUser":{"email":"jayadhav2000@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTteESrwsQuK7rB7lvMyvZbA1U_txO3QWunR5Od5Vue1u-BQ"}}
+[debug] [2023-08-17T10:43:36.964Z] [hosting] release: {"name":"projects/902585264628/sites/jay-adhav/channels/live/releases/1692269016235000","version":{"name":"projects/902585264628/sites/jay-adhav/versions/bd207f80caf6e18f","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-08-17T10:41:01.080842Z","createUser":{"email":"jayadhav2000@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTteESrwsQuK7rB7lvMyvZbA1U_txO3QWunR5Od5Vue1u-BQ"},"finalizeTime":"2023-08-17T10:43:35.518908Z","finalizeUser":{"email":"jayadhav2000@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTteESrwsQuK7rB7lvMyvZbA1U_txO3QWunR5Od5Vue1u-BQ"}},"type":"DEPLOY","releaseTime":"2023-08-17T10:43:36.235Z","releaseUser":{"email":"jayadhav2000@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTteESrwsQuK7rB7lvMyvZbA1U_txO3QWunR5Od5Vue1u-BQ"}}
+[info] +  hosting[jay-adhav]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/jay-adhav/overview
+[info] Hosting URL: https://jay-adhav.web.app
+[debug] [2023-08-17T10:43:42.590Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:254:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
